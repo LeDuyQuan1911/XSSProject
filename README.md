@@ -100,19 +100,18 @@ Ví dụ: JavaScript trên trang web lấy dữ liệu từ URL và chèn trực
 5.   Điền url to attack là web cần kiểm tra: http://localhost/webopencart => Click attack
 6.   Khi click vào sẽ spider tất cả các link và text field của trang web để kiểm tra lỗi có thể xuất hiện
 7.   
-   - ![Hình ảnh minh họa quá trình kiểm tra](image-2.png)
-    7.1     Alerts sẽ hiện các lỗi có thể xuất hiện trong trang web của bạn
-    7.2     Các đọc và hiểu lỗi: ![alt text](image-3.png) ![alt text](image-4.png)
-            Phần in đậm là tên lỗi của bug: Vulnerable JS Library
+    ![Hình ảnh minh họa quá trình kiểm tra](image-2.png)
+    7.1     Alerts sẽ hiện các lỗi có thể xuất hiện trong trang web của bạn ![alt text](image-3.png) 
+    7.2     Cách đọc và hiểu lỗi: ![alt text](image-4.png)
+-   Phần in đậm là tên lỗi của bug: Vulnerable JS Library
     -   Risk: là mức độ của lỗi VD: high, medium, low
     -   Confidence: Độ chắc chắn của việc testing => Mức độ càng cao thì việc lỗi chắc chắn sẽ xảy ra trong trang web càng cao
     -   Evidence: Bằng chứng cho việc bug xảy ra
     -   Description: Mô tả bug
-    -   Request: đây là phần gửi các input tới trang web và phần nảy sẽ thể hiện thông tin các input gửi vào ![alt text](image-5.png)
-    -   Response: Đây là phần trả lại của trang web và mình có thể kiểm tra các response có thể tạo lỗi ở đây ![alt text](image-6.png)
-    -   Đây là phần chi tiết các lỗi và có cả phần Solution: ![alt text](image-7.png)    
-    -   Đây là phần mình có thể kiểm tra các input mà trang ZAP đã thực hiện và có thể chạy lại hoặc có thể thay đổi giá trị của paramater
-                để kiểm tra output: ![alt text](image-8.png)
+8.   Request: đây là phần gửi các input tới trang web và phần nảy sẽ thể hiện thông tin các input gửi vào ![alt text](image-5.png)
+9.   Response: Đây là phần trả lại của trang web và mình có thể kiểm tra các response có thể tạo lỗi ở đây ![alt text](image-6.png)
+10.   Đây là phần chi tiết các lỗi và có cả phần Solution: ![alt text](image-7.png)    
+11.   Đây là phần mình có thể kiểm tra các input mà trang ZAP đã thực hiện và có thể chạy lại hoặc có thể thay đổi giá trị của paramater để kiểm tra output: ![alt text](image-8.png)
 
 **Kết luận:** ZAP có thể giúp chúng ta tìm các potienal bug và đưa ra các solution => Chúng ta có thể dựa vào khả năng xảy ra của bug và các thông tin của ZAP để tái tạo lại bug để xác nhận các bug đó có thể xảy ra. Sau đó, nếu xảy ra các bug này xảy ra sẽ report lên Jira, Trello,... để cho dev có thể nhận thông tin và xử lí
 
@@ -159,25 +158,27 @@ Ví dụ: JavaScript trên trang web lấy dữ liệu từ URL và chèn trực
 
 # Jira and Trello
 
+## Jira ##
+
 **Jira:** là một công cụ mạnh mẽ để theo dõi lỗi và quản lý công việc, giúp tối ưu hóa quy trình làm việc và tăng cường sự phối hợp giữa các thành viên trong nhóm.
 
 **Yêu cầu cần thiết:**
--   Có tài khoản Jira và truy cập Jira
+1.   Có tài khoản Jira và truy cập Jira
         VD: https://leduyquan2574.atlassian.net/jira/your-work
--   Vào dự án bạn muốn quản lí lối hoặc tạo mới dự án: ![alt text](image-10.png)
--   Click **Create** bug: ![alt text](image-11.png)
--   Chọn loại issue là Bug.
--   Điền các thông tin:
-    -   Summary (Tóm tắt): Mô tả ngắn gọn về lỗi.
-    -   Description (Mô tả): Mô tả chi tiết lỗi, cách tái hiện, và môi trường phát sinh.
-    -   Priority (Mức độ ưu tiên): Xác định mức độ nghiêm trọng của lỗi (Low, Medium, High, Critical).
-    -   Assignee (Người xử lý): Gán lỗi cho một thành viên trong nhóm.
--   Nhấn "Create" để lưu lại.
--   Solve các bug đã được tạo:
-    -   Sử dụng các trạng thái trong workflow (ví dụ: Open, In Progress, Resolved, Closed) để cập nhật tiến độ xử lý. ![alt text](image-12.png)
-    -   Thêm bình luận vào lỗi để trao đổi thông tin. ![alt text](image-13.png)
-    -   Đính kèm file (ảnh chụp màn hình, log file) để hỗ trợ việc xử lý. ![alt text](image-14.png)
-    -   Sử dụng các báo cáo có sẵn (Burndown Chart, Issue Statistics,...) để theo dõi số lượng lỗi đã được xử lý và còn tồn đọng. ![alt text](image-15.png)
+2.   Vào dự án bạn muốn quản lí lối hoặc tạo mới dự án: ![alt text](image-10.png)
+3.   Click **Create** bug: ![alt text](image-11.png)
+4.   Chọn loại issue là Bug.
+5.   Điền các thông tin:
+-   Summary (Tóm tắt): Mô tả ngắn gọn về lỗi.
+-   Description (Mô tả): Mô tả chi tiết lỗi, cách tái hiện, và môi trường phát sinh.
+-   Priority (Mức độ ưu tiên): Xác định mức độ nghiêm trọng của lỗi (Low, Medium, High, Critical).
+-   Assignee (Người xử lý): Gán lỗi cho một thành viên trong nhóm.
+6.   Nhấn "Create" để lưu lại.
+7.   Solve các bug đã được tạo:
+-   Sử dụng các trạng thái trong workflow (ví dụ: Open, In Progress, Resolved, Closed) để cập nhật tiến độ xử lý. ![alt text](image-12.png)
+-   Thêm bình luận vào lỗi để trao đổi thông tin. ![alt text](image-13.png)
+-   Đính kèm file (ảnh chụp màn hình, log file) để hỗ trợ việc xử lý. ![alt text](image-14.png)
+-   Sử dụng các báo cáo có sẵn (Burndown Chart, Issue Statistics,...) để theo dõi số lượng lỗi đã được xử lý và còn tồn đọng. ![alt text](image-15.png)
 
 **Lợi ích khi sử dụng Jira để theo dõi lỗi:**
 -   Minh bạch: Toàn bộ lỗi và tiến độ xử lý được hiển thị rõ ràng.
@@ -187,7 +188,7 @@ Ví dụ: JavaScript trên trang web lấy dữ liệu từ URL và chèn trực
 
 
 
-
+## Trello
 **Trello:** là một công cụ quản lý công việc và dự án trực quan, dựa trên phương pháp Kanban, được phát triển bởi Atlassian. Nó giúp các cá nhân và nhóm tổ chức, theo dõi, và quản lý công việc một cách đơn giản và hiệu quả thông qua các bảng (boards), danh sách (lists), và thẻ (cards).
 
 **Cách sử dụng Trello:** ![alt text](image-16.png) 
@@ -206,7 +207,7 @@ Ví dụ: JavaScript trên trang web lấy dữ liệu từ URL và chèn trực
 
 
 
-**So sánh Jira và Trello**
+## So sánh Jira và Trello
 ![alt text](image-19.png)
 
 **Cách lựa chọn Jira hay Trello:**
